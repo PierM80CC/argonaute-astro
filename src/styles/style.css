@@ -1540,16 +1540,20 @@ p { color: var(--text-muted); }
     gap: 16px;
     padding-bottom: 8px;
     scrollbar-width: none;
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
   .bento::-webkit-scrollbar { display: none; }
   .bento__card {
-    min-width: 58vw;
+    min-width: 72%;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
   .bento__card--featured {
     transform: none;
-    min-width: 58vw;
+    min-width: 72%;
     border-width: 1px;
   }
   .bento__card--featured:hover { transform: none; }
@@ -1564,10 +1568,14 @@ p { color: var(--text-muted); }
     gap: 16px;
     padding-bottom: 8px;
     scrollbar-width: none;
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
   .reviews__grid::-webkit-scrollbar { display: none; }
   .review {
-    min-width: 58vw;
+    min-width: 72%;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
@@ -1583,10 +1591,14 @@ p { color: var(--text-muted); }
     -webkit-overflow-scrolling: touch;
     gap: 12px;
     scrollbar-width: none;
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
   .trust__grid::-webkit-scrollbar { display: none; }
   .trust__item {
-    min-width: calc(45vw - 12px);
+    min-width: 42%;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
