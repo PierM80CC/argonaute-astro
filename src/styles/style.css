@@ -1622,12 +1622,35 @@ p { color: var(--text-muted); }
     padding-right: var(--gutter);
   }
   .trust__grid::-webkit-scrollbar { display: none; }
+  .trust { padding: 32px 0; }
   .trust__item {
     width: 42vw;
     min-width: 42vw;
     max-width: 42vw;
     scroll-snap-align: start;
     flex-shrink: 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+    gap: 10px;
+    border-radius: var(--r-xl);
+  }
+  .trust__icon-circle {
+    width: 44px;
+    height: 44px;
+  }
+  .trust__icon-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+  .trust__num {
+    font-size: 1.5rem;
+  }
+  .trust__label {
+    font-size: 0.75rem;
+  }
+  .trust__sub {
+    font-size: 0.65rem;
   }
 
   .footer__grid { grid-template-columns: 1fr; gap: 32px; }
