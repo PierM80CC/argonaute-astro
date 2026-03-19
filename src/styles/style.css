@@ -1543,17 +1543,18 @@ p { color: var(--text-muted); }
   }
   .bento::-webkit-scrollbar { display: none; }
   .bento__card {
-    min-width: 70vw;
+    min-width: 58vw;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
   .bento__card--featured {
     transform: none;
-    min-width: 70vw;
+    min-width: 58vw;
     border-width: 1px;
   }
   .bento__card--featured:hover { transform: none; }
   .bento__card--featured::before { display: none; }
+  .bento__meta { flex-direction: column; gap: 6px; }
 
   .reviews__grid {
     display: flex;
@@ -1566,7 +1567,7 @@ p { color: var(--text-muted); }
   }
   .reviews__grid::-webkit-scrollbar { display: none; }
   .review {
-    min-width: 70vw;
+    min-width: 58vw;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
