@@ -1569,7 +1569,20 @@ p { color: var(--text-muted); }
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .stats { padding: 60px 0; }
 
-  .trust__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .trust__grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    scrollbar-width: none;
+  }
+  .trust__grid::-webkit-scrollbar { display: none; }
+  .trust__item {
+    min-width: calc(45vw - 12px);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
 
   .footer__grid { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
