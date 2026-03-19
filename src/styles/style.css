@@ -1547,13 +1547,17 @@ p { color: var(--text-muted); }
   }
   .bento::-webkit-scrollbar { display: none; }
   .bento__card {
-    min-width: 72%;
+    width: 70vw;
+    min-width: 70vw;
+    max-width: 70vw;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
   .bento__card--featured {
     transform: none;
-    min-width: 72%;
+    width: 70vw;
+    min-width: 70vw;
+    max-width: 70vw;
     border-width: 1px;
   }
   .bento__card--featured:hover { transform: none; }
@@ -1575,7 +1579,9 @@ p { color: var(--text-muted); }
   }
   .reviews__grid::-webkit-scrollbar { display: none; }
   .review {
-    min-width: 72%;
+    width: 70vw;
+    min-width: 70vw;
+    max-width: 70vw;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
@@ -1598,7 +1604,9 @@ p { color: var(--text-muted); }
   }
   .trust__grid::-webkit-scrollbar { display: none; }
   .trust__item {
-    min-width: 42%;
+    width: 42vw;
+    min-width: 42vw;
+    max-width: 42vw;
     scroll-snap-align: start;
     flex-shrink: 0;
   }
