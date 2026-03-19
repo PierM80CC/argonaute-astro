@@ -6,7 +6,7 @@ export default config({
   storage: isLocal
     ? { kind: 'local' }
     : { kind: 'cloud' },
-  cloud: { project: 'argonaute-astro' },
+  cloud: { project: 'argonaute/argonaute-astro' },
   singletons: {
     hero: singleton({
       label: 'Hero',
