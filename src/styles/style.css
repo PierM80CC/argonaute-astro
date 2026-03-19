@@ -4,7 +4,6 @@
    Fonts: Epilogue (display) + Outfit (body)
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Palette */
@@ -1496,6 +1495,8 @@ p { color: var(--text-muted); }
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
+  .trust__grid { grid-template-columns: repeat(2, 1fr); }
+
   .bento {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -1543,7 +1544,7 @@ p { color: var(--text-muted); }
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .stats { padding: 60px 0; }
 
-  .trust__grid { gap: 24px; }
+  .trust__grid { grid-template-columns: 1fr; gap: 16px; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
