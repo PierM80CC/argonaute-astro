@@ -1547,22 +1547,37 @@ p { color: var(--text-muted); }
   }
   .bento::-webkit-scrollbar { display: none; }
   .bento__card {
-    width: 70vw;
-    min-width: 70vw;
-    max-width: 70vw;
+    width: 82vw;
+    min-width: 82vw;
+    max-width: 82vw;
     scroll-snap-align: start;
     flex-shrink: 0;
+    border-radius: var(--r-xl);
+    box-shadow: var(--sh-sm);
   }
   .bento__card--featured {
     transform: none;
-    width: 70vw;
-    min-width: 70vw;
-    max-width: 70vw;
+    width: 82vw;
+    min-width: 82vw;
+    max-width: 82vw;
     border-width: 1px;
   }
   .bento__card--featured:hover { transform: none; }
   .bento__card--featured::before { display: none; }
-  .bento__meta { flex-direction: column; gap: 6px; }
+  .bento__img { height: 180px; }
+  .bento__card--featured .bento__img { height: 180px; }
+  .bento__body { padding: 20px; }
+  .bento__name { font-size: 1.1rem; }
+  .bento__desc { font-size: 0.82rem; margin-bottom: 12px; }
+  .bento__meta {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    padding-top: 10px;
+    margin-bottom: 14px;
+  }
+  .bento__meta-item { font-size: 0.72rem; }
+  .bento__footer { padding-top: 12px; border-top: 1px solid var(--border); }
+  .bento__price { font-size: 1.5rem; }
 
   .reviews__grid {
     display: flex;
@@ -1579,12 +1594,16 @@ p { color: var(--text-muted); }
   }
   .reviews__grid::-webkit-scrollbar { display: none; }
   .review {
-    width: 70vw;
-    min-width: 70vw;
-    max-width: 70vw;
+    width: 82vw;
+    min-width: 82vw;
+    max-width: 82vw;
     scroll-snap-align: start;
     flex-shrink: 0;
+    padding: 22px;
   }
+  .review__text { font-size: 0.85rem; line-height: 1.65; }
+  .review__avatar { width: 34px; height: 34px; font-size: 0.75rem; }
+  .review__name { font-size: 0.82rem; }
   .reviews__header { flex-direction: column; align-items: flex-start; }
 
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
