@@ -5,10 +5,8 @@ const isLocal = import.meta.env.DEV;
 export default config({
   storage: isLocal
     ? { kind: 'local' }
-    : {
-        kind: 'github',
-        repo: 'PierM80CC/argonaute-astro',
-      },
+    : { kind: 'cloud' },
+  cloud: { project: 'argonaute-astro' },
   singletons: {
     hero: singleton({
       label: 'Hero',
