@@ -618,7 +618,7 @@ p { color: var(--text-muted); }
   font-size: 1.05rem;
 }
 
-/* ---- Permits Grid ---- */
+/* ---- Permits Grid / Carousel mobile ---- */
 .bento {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1528,12 +1528,42 @@ p { color: var(--text-muted); }
   .section { padding: 80px 0; }
 
   .bento {
-    grid-template-columns: 1fr;
-    min-height: auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
   }
-  .bento__card--featured { grid-column: auto; }
+  .bento::-webkit-scrollbar { display: none; }
+  .bento__card {
+    min-width: 80vw;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  .bento__card--featured {
+    grid-column: auto;
+    transform: none;
+    min-width: 80vw;
+  }
+  .bento__card--featured:hover { transform: none; }
 
-  .reviews__grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+  .reviews__grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .reviews__grid::-webkit-scrollbar { display: none; }
+  .review {
+    min-width: 80vw;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
   .reviews__header { flex-direction: column; align-items: flex-start; }
 
   .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
