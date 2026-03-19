@@ -1,7 +1,14 @@
 import { config, fields, singleton, collection } from '@keystatic/core';
 
+const isLocal = import.meta.env.DEV;
+
 export default config({
-  storage: { kind: 'local' },
+  storage: isLocal
+    ? { kind: 'local' }
+    : {
+        kind: 'github',
+        repo: 'PierM80CC/argonaute-astro',
+      },
   singletons: {
     hero: singleton({
       label: 'Hero',
